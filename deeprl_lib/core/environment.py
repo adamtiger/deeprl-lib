@@ -8,7 +8,7 @@ class Environment:
         self.log_freq = 100
         self.folder = None
         self.max_steps = 500
-
+    
     def step(self, action):
         raise NotImplementedError
 
@@ -32,6 +32,3 @@ class GymEnvironment(Environment):
 
     def reset(self):
         return self.env.reset()
-
-
-        

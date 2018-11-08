@@ -1,14 +1,13 @@
 
 
-class Agent:
+class Algorithm:
     
-    def __init__(self, name):
+    def __init__(self, name, model, env):
         self.name = name
+        self.model = model
+        self.env = env
 
-    def train(self, model, env, hypers):
-        raise NotImplementedError
-
-    def eval(self, model, env, hypers):
+    def train(self, hypers):
         raise NotImplementedError
 
     def serialize(self, folder):
